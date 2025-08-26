@@ -1,14 +1,14 @@
 Como configurar o Git Hub
     Primeiro:
         crie uma pasta do projeto ou 
-        clone o projetoFazendaEtec => git clone <<url do repositório>>
+        clone o Melius => git clone <<url do repositório>>
     Segundo:
         iniciar o git na pasta criada ==> git init
     Terceiro:
         configure a conta de usuario ==> git config --global user.name "LeticiaTcy"
         configure o email de usuario ==> git config --global user.email "leticiafurlanesteves@hotmail.com"
     Quarto:
-        configure o repositório onde ficará as mudanças do projeto ==> git remote add origin https://github.com/LeticiaTcy
+        configure o repositório onde ficará as mudanças do projeto ==> git remote add origin https://github.com/LeticiaTcy/Melius.git
 
 Como atualizar o diretório antes de começar a trabalhar no projeto
     git pull origin main ==> Deixa o diretório igual ao repositório para todos os participantes do projeto
@@ -28,3 +28,4 @@ Para aceitar as modificações de um branch no main no Git, você pode seguir os
    Você precisará resolver os conflitos manualmente nos arquivos afetados e depois adicionar as mudanças resolvidas:
 5. **Finalize o merge**:                    git commit -m "Merge do branch nome-do-branch no main"
 6. **Envie as mudanças para o repositório remoto**:   git push origin main
+
