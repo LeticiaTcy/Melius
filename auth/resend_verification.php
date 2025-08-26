@@ -6,7 +6,7 @@ require 'send_verification_email.php';
 $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
 
 if (!$email) {
-    echo "Email is required.";
+    echo "Por favor, insira um email válido.";
     exit;
 }
 

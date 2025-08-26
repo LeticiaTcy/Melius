@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Lógica - Teste seu Raciocínio</title>
+    <meta name="description" content="Quiz fofo e divertido para testar seu raciocínio lógico com perguntas de lógica clássica. 20 perguntas com cronômetro e feedback imediato!" />
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="container">
+        <div class="quiz-card text-center">
+            <div class="mb-8">
+                <h1 data-translate="welcome-title">Quiz de Lógica</h1>
+                <p class="subtitle" data-translate="welcome-subtitle">
+                    Teste seu raciocínio lógico com perguntas de lógica clássica de forma divertida! 🤔
+                </p>
+            </div>
+            
+            <div class="info-box">
+                <h3 data-translate="how-it-works">Como funciona:</h3>
+                <div class="info-item" data-translate="info-questions">20 perguntas de lógica</div>
+                <div class="info-item" data-translate="info-timer">Cronômetro para medir seu tempo</div>
+                <div class="info-item" data-translate="info-feedback">Resposta imediata com explicação</div>
+                <div class="info-item" data-translate="info-results">Resultado final com pontuação</div>
+            </div>
+
+            <button id="start-btn" class="btn btn-primary pulse-glow" data-translate="start-quiz">
+                Iniciar Quiz
+            </button>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="container hidden">
+        <div class="quiz-card quiz-card-large">
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div style="flex: 1; margin-right: 2rem;">
+                        <div class="progress-info">
+                            <span id="question-counter">Pergunta 1 de 20</span>
+                            <span id="progress-percentage">5%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill" style="width: 5%"></div>
+                        </div>
+                    </div>
+                    <div class="timer">
+                        <span class="timer-icon">⏱️</span>
+                        <span id="timer-display" class="timer-display">00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="question-text">Carregando pergunta...</h2>
+            
+            <div id="answers-container">
+                <!-- Answers will be inserted here -->
+            </div>
+
+            <div id="feedback-container"></div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="container hidden">
+        <div class="quiz-card text-center">
+            <div class="mb-8">
+                <div class="emoji float-animation">🎉</div>
+                <h1 style="font-size: 2rem;" data-translate="congratulations">Parabéns!</h1>
+                <p id="score-message" class="subtitle">
+                    Carregando resultado...
+                </p>
+            </div>
+
+            <div class="results-grid">
+                <div class="stat-card">
+                    <div id="score-value" class="stat-value">0/20</div>
+                    <div class="stat-label" data-translate="correct-answers">Respostas Corretas</div>
+                    <div id="percentage-value" class="stat-detail">0%</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div id="time-value" class="stat-value">0m 0s</div>
+                    <div class="stat-label" data-translate="total-time">Tempo Total</div>
+                    <div id="avg-time-value" class="stat-detail">0s por pergunta</div>
+                </div>
+            </div>
+
+            <button>
+                Tentar Novamente
+            </button>
+        </div>
+    </div>
+    <!--Botão feito para linkar no script-->
+    <script src="../../assets/js/logic_quiz_script.js"></script>
+</body>
+</html>

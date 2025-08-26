@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
-// You can keep these somewhere secure, or use environment variables
+// Email default que será usado para enviar os emails de verificação
 $smtpUser = 'leticiafesteves@gmail.com';
 $smtpPass = 'dbasetzojehtqtwe';
 
@@ -40,9 +40,10 @@ function sendVerificationEmail($email, $token) {
         $mail->setFrom($smtpUser, 'Melius');
         $mail->addAddress($email);
         $mail->isHTML(true);
-        $mail->Subject = 'Email Verification';
-        $mail->Body    = "Your verification code is: <b>{$token}</b>";
-        $mail->AltBody = "Your verification code is: {$token}";
+        $mail->Subject = 'Código de Verificação';
+        $mail->Body    = "Muito Obrigado por cadastrar no Melius! <br><br><br>
+                          Seu código de verificação é: <b>{$token}</b>";
+        $mail->AltBody = "Seu código de verificação é: {$token}";
 
         $mail->send();
         return true;
