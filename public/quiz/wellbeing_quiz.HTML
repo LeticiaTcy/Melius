@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mellius - Avalie seu Estado Emocional</title>
+    <meta name="description" content="Avalie seu bem-estar emocional com este quiz interativo. Descubra como estão seus sentimentos e estado mental.">
+    <link rel="stylesheet" href="stylesWB.css">
+    </head>
+<!--Inicio da página inicial-->
+    <body>
+    <div class="overlay" id="overlay"></div>
+    <!--Container da sidebar-->
+    <div class="app-container">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title" data-translate="menu_title">Menu</h2>
+            </div>
+            <div class="menu-items">
+                <button class="menu-item" onclick="alert('Em desenvolvimento')">
+                    <span class="menu-icon">🏠</span>
+                    <span data-translate="menu_home">Menu Inicial</span>
+                </button>
+                <button class="menu-item active">
+                    <span class="menu-icon">🧠</span>
+                    <span data-translate="menu_wellbeing">Quiz de Bem-Estar</span>
+                </button>
+                <button class="menu-item" onclick="alert('Em desenvolvimento')">
+                    <span class="menu-icon">🎮</span>
+                    <span data-translate="menu_games">Jogos</span>
+                </button>
+                <button class="menu-item" onclick="alert('Em desenvolvimento')">
+                    <span class="menu-icon">👤</span>
+                    <span data-translate="menu_login">Login</span>
+                </button>
+                <button class="menu-item" onclick="toggleDarkMode()">
+                    <span class="menu-icon">🌓</span>
+                    <span data-translate="menu_darkmode">Modo Escuro</span>
+                </button>
+                <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                        <span class="menu-icon">🌐</span>
+                        <span data-translate="menu_language">Idioma</span>
+                    </div>
+                    <div class="language-selector">
+                        <button class="lang-btn active" onclick="changeLanguage('pt')">PT</button>
+                        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                        <button class="lang-btn" onclick="changeLanguage('es')">ES</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="header">
+                <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+                <h1 class="page-title" data-translate="page_title">Quiz de Bem-Estar</h1>
+            </header>
+
+            <div class="content">
+                <div class="quiz-container">
+                    <div id="welcomeScreen" class="welcome-screen">
+                        <h1 class="welcome-title" data-translate="welcome_title">Quiz de Bem-Estar Emocional</h1>
+                        <p class="welcome-subtitle" data-translate="welcome_subtitle">
+                            Avalie seu estado emocional atual através de perguntas sobre seus sentimentos e bem-estar. 
+                            Este quiz ajudará você a entender melhor como está se sentindo.
+                        </p>
+                        <button class="btn" onclick="startQuiz()" data-translate="start_quiz">
+                            <span>🧠</span> Começar Quiz
+                        </button>
+                    </div>
+
+                    <div id="quizScreen" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressBar"></div>
+                        </div>
+                        
+                        <div class="question-header">
+                            <div class="question-number" id="questionNumber"></div>
+                            <h2 class="question-text" id="questionText"></h2>
+                        </div>
+
+                        <div class="options-container" id="optionsContainer"></div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <button class="btn" onclick="nextQuestion()" id="nextButton" disabled data-translate="next_question">
+                                Próxima Pergunta
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="resultsScreen" style="display: none;">
+                        <h1 class="results-title" data-translate="results_title">Resultados do Quiz</h1>
+                        
+                        <div class="quiz-stats">
+                            <div class="stat-card">
+                                <div class="stat-value" id="finalScore">0</div>
+                                <div class="stat-label" data-translate="total_score">Pontuação Total</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value" id="wellbeingLevel">-</div>
+                                <div class="stat-label" data-translate="wellbeing_level">Nível de Bem-Estar</div>
+                            </div>
+                        </div>
+
+                        <div class="score-message" id="scoreMessage"></div>
+
+                        <button class="btn" onclick="resetQuiz()" data-translate="restart_quiz">
+                            <span>🔄</span> Fazer Quiz Novamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scriptWB.js"> // SCRIPT pra fazer quizes e menu lateral funcionarem bem    </script>
+</body>
+</html>
