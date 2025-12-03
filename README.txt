@@ -6,7 +6,7 @@ Como configurar o Git Hub
         iniciar o git na pasta criada ==> git init
     Terceiro:
         configure a conta de usuario ==> git config --global user.name "LeticiaTcy"
-        configure o email de usuario ==> git config --global user.email "leticiafurlanesteves@hotmail.com"
+        configure o email de usuario ==> git config --global user.email "leticiatcy@hotmail.com"
     Quarto:
         configure o repositório onde ficará as mudanças do projeto ==> git remote add origin https://github.com/LeticiaTcy/Melius.git
 
@@ -28,4 +28,5 @@ Para aceitar as modificações de um branch no main no Git, você pode seguir os
    Você precisará resolver os conflitos manualmente nos arquivos afetados e depois adicionar as mudanças resolvidas:
 5. **Finalize o merge**:                    git commit -m "Merge do branch nome-do-branch no main"
 6. **Envie as mudanças para o repositório remoto**:   git push origin main
+
 
