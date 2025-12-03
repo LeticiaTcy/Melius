@@ -2,7 +2,11 @@
        const translations = {
         pt: {
             'welcome-title': 'Quiz de Lógica',
+<<<<<<< HEAD
             'welcome-subtitle': 'Teste seu raciocínio lógico com perguntas de lógica clássica aqui no Mellius!',
+=======
+            'welcome-subtitle': 'Teste seu raciocínio lógico com perguntas de lógica clássica de forma divertida! 🤔',
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
             'how-it-works': 'Como funciona:',
             'info-questions': '📋 20 perguntas de lógica',
             'info-timer': '⏱️ Cronômetro para medir seu tempo',
@@ -23,7 +27,11 @@
         },
         en: {
             'welcome-title': 'Logic Quiz',
+<<<<<<< HEAD
             'welcome-subtitle': 'Test your logical reasoning with classic logic questions here at Mellius!',
+=======
+            'welcome-subtitle': 'Test your logical reasoning with classic logic questions in a fun way! 🤔',
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
             'how-it-works': 'How it works:',
             'info-questions': '📋 20 logic questions',
             'info-timer': '⏱️ Timer to measure your time',
@@ -44,7 +52,11 @@
         },
         es: {
             'welcome-title': 'Quiz de Lógica',
+<<<<<<< HEAD
             'welcome-subtitle': '¡Prueba tu razonamiento lógico con preguntas de lógica clásica aquí en Mellius!',
+=======
+            'welcome-subtitle': '¡Prueba tu razonamiento lógico con preguntas de lógica clásica de forma divertida! 🤔',
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
             'how-it-works': 'Cómo funciona:',
             'info-questions': '📋 20 preguntas de lógica',
             'info-timer': '⏱️ Cronómetro para medir tu tiempo',

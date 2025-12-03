@@ -1,16 +1,33 @@
+<<<<<<< HEAD
 /*Importação de fontes para o CSS*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
         :root {
             --bg-light: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 25%, #e6f3ff 50%, #e6fff0 75%, #fff2e6 100%);
             --bg-dark: linear-gradient(135deg, #26334e 0%, #16213e 25%, #0d3036 50%, #161f3a 75%, #0c2c20 100%);
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-light: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 25%, #e6f3ff 50%, #e6fff0 75%, #fff2e6 100%);
+            --bg-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #e94560 100%);
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
             --text-light: #4a5568;
             --text-dark: #e2e8f0;
             --card-light: rgba(255, 255, 255, 0.9);
             --card-dark: rgba(45, 55, 72, 0.95);
+<<<<<<< HEAD
             --icone-claro:linear-gradient(135deg, hsl(183, 100%, 85%), hsl(290, 60%, 70%));
             --icone-escuro:linear-gradient(135deg, hsl(183, 100%, 85%), hsl(290, 60%, 70%));
 
+=======
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         }
         
         body {
@@ -164,6 +181,7 @@
             padding: 1rem;
         }
         
+<<<<<<< HEAD
         /*CSS DA LOGO*/
         .logo-site {
         display:flex;
@@ -200,6 +218,8 @@
         }
         
 
+=======
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         .quiz-card {
             background: var(--card-light);
             backdrop-filter: blur(10px);
@@ -327,6 +347,7 @@
             align-items: center;
             justify-content: center;
         }
+<<<<<<< HEAD
         /*Botão de start do quizz*/
         .btn-primary {
             background: rgba(255, 255, 255, 0.8);
@@ -336,12 +357,22 @@
             text-align: center;
             padding-left: 1.5rem;
             display:flex;
+=======
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff69b4, #9370db);
+            color: white;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         }
         
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 30px rgba(255, 105, 180, 0.4);
+<<<<<<< HEAD
             justify-content:center;
+=======
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         }
         
         .btn-answer {
@@ -358,32 +389,41 @@
             background: rgba(255, 105, 180, 0.1);
             border-color: #ff69b4;
             transform: translateX(5px);
+<<<<<<< HEAD
             width: 100%; /*Largura do botão*/
             text-align: center;
             padding-left: 1.5rem;
             display:flex;
+=======
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         }
         
         .btn-correct {
             background: rgba(34, 197, 94, 0.2);
             border-color: #22c55e;
             color: #166534;
+<<<<<<< HEAD
             width: 100%; /*Largura do botão*/
             text-align: center;
             padding-left: 1.5rem;
             display:flex;
             margin-bottom: 1rem; /*Importante para que os botões não permaneçam colados*/
+=======
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         }
         
         .btn-incorrect {
             background: rgba(239, 68, 68, 0.2);
             border-color: #ef4444;
             color: #991b1b;
+<<<<<<< HEAD
             width: 100%; /*Largura do botão*/
             text-align: center;
             padding-left: 1.5rem;
             display:flex;
             margin-bottom: 1rem;
+=======
+>>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
         }
         
         .btn:disabled {
