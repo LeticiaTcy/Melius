@@ -10,11 +10,7 @@ Como configurar o Git Hub
         iniciar o git na pasta criada ==> git init
     Terceiro:
         configure a conta de usuario ==> git config --global user.name "LeticiaTcy"
-<<<<<<< HEAD
-        configure o email de usuario ==> git config --global user.email "leticiafurlanesteves@hotmail.com"
-=======
         configure o email de usuario ==> git config --global user.email "leticiatcy@hotmail.com"
->>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
     Quarto:
         configure o repositório onde ficará as mudanças do projeto ==> git remote add origin https://github.com/LeticiaTcy/Melius.git
 
