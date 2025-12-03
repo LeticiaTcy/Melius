@@ -1,0 +1,895 @@
+/* Mellius Design System - Mental Health & Wellness Theme */
+:root {
+    /* Wellness Color Palette - Light Mode */
+    --background: hsl(155, 20%, 98%);
+    --foreground: hsl(155, 25%, 15%);
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(155, 25%, 15%);
+    --primary: hsl(155, 65%, 55%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --primary-glow: hsl(155, 45%, 75%);
+    --secondary: hsl(260, 25%, 92%);
+    --secondary-foreground: hsl(260, 15%, 25%);
+    --muted: hsl(155, 15%, 95%);
+    --muted-foreground: hsl(155, 10%, 45%);
+    --accent: hsl(200, 35%, 88%);
+    --accent-foreground: hsl(200, 25%, 25%);
+    --border: hsl(155, 15%, 90%);
+    --input: hsl(155, 15%, 94%);
+    --ring: hsl(155, 65%, 55%);
+    
+    /* Wellness-specific colors */
+    --wellness-mint: hsl(155, 65%, 55%);
+    --wellness-sage: hsl(130, 20%, 65%);
+    --wellness-lavender: hsl(260, 25%, 75%);
+    --wellness-sky: hsl(200, 50%, 75%);
+    --wellness-warm: hsl(25, 45%, 85%);
+    
+    /* Gradients */
+    --gradient-wellness: linear-gradient(135deg, hsla(155, 65%, 55%, 0.1), hsla(200, 50%, 75%, 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(155, 65%, 55%), hsl(200, 50%, 75%));
+    --gradient-card: linear-gradient(145deg, hsla(0, 0%, 100%, 0.8), hsla(155, 15%, 95%, 0.6));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsla(155, 25%, 15%, 0.08);
+    --shadow-glow: 0 0 40px hsla(155, 65%, 55%, 0.15);
+    --shadow-calendar: 0 8px 32px hsla(155, 25%, 15%, 0.12);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Calendar specific */
+    --calendar-primary: var(--wellness-mint);
+    --sticker-shadow: 0 2px 8px hsla(155, 25%, 15%, 0.15);
+    
+    /* Radius */
+    --radius: 0.75rem;
+}
+
+.dark {
+    /* Dark Mode - Comfortable Night Colors */
+    --background: hsl(155, 15%, 8%);
+    --foreground: hsl(155, 10%, 92%);
+    --card: hsl(155, 12%, 12%);
+    --card-foreground: hsl(155, 10%, 92%);
+    --primary: hsl(155, 50%, 65%);
+    --primary-foreground: hsl(155, 15%, 8%);
+    --primary-glow: hsl(155, 35%, 45%);
+    --secondary: hsl(260, 15%, 18%);
+    --secondary-foreground: hsl(260, 10%, 85%);
+    --muted: hsl(155, 10%, 15%);
+    --muted-foreground: hsl(155, 8%, 65%);
+    --accent: hsl(200, 25%, 20%);
+    --accent-foreground: hsl(200, 15%, 85%);
+    --border: hsl(155, 10%, 20%);
+    --input: hsl(155, 10%, 18%);
+    --ring: hsl(155, 50%, 65%);
+    
+    /* Dark mode wellness colors */
+    --wellness-mint: hsl(155, 50%, 65%);
+    --wellness-sage: hsl(130, 15%, 45%);
+    --wellness-lavender: hsl(260, 20%, 55%);
+    --wellness-sky: hsl(200, 35%, 55%);
+    --wellness-warm: hsl(25, 30%, 45%);
+    
+    /* Dark gradients */
+    --gradient-wellness: linear-gradient(135deg, hsla(155, 50%, 65%, 0.15), hsla(200, 35%, 55%, 0.15));
+    --gradient-hero: linear-gradient(135deg, hsl(155, 50%, 65%), hsl(200, 35%, 55%));
+    --gradient-card: linear-gradient(145deg, hsla(155, 12%, 12%, 0.9), hsla(155, 10%, 15%, 0.7));
+    
+    /* Dark shadows */
+    --shadow-soft: 0 4px 20px hsla(0, 0%, 0%, 0.3);
+    --shadow-glow: 0 0 40px hsla(155, 50%, 65%, 0.2);
+    --shadow-calendar: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    
+    /* Dark calendar */
+    --calendar-primary: var(--wellness-mint);
+    --sticker-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.3);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation Styles */
+.nav {
+    width: 100%;
+    background: hsla(0, 0%, 100%, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.dark .nav {
+    background: hsla(155, 12%, 12%, 0.8);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient-hero);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+    color: white;
+}
+
+.nav-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-btn {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .main-nav .nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .main-nav .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-control-btn {
+    background: none;
+    border: none;
+    color: var(--muted-foreground);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.nav-control-btn:hover {
+    color: var(--foreground);
+    background: var(--accent);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    min-width: 224px;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: var(--transition-smooth);
+}
+
+.dropdown-content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-section {
+    padding: 8px;
+}
+
+.dropdown-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--foreground);
+    padding: 8px;
+}
+
+.dropdown-subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-item {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--foreground);
+    transition: var(--transition-smooth);
+}
+
+.dropdown-item:hover {
+    background: var(--accent);
+}
+
+.color-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.color-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.color-btn:hover {
+    border-color: var(--foreground);
+}
+
+.color-btn.mint { background: var(--wellness-mint); }
+.color-btn.lavender { background: var(--wellness-lavender); }
+.color-btn.sky { background: var(--wellness-sky); }
+.color-btn.warm { background: var(--wellness-warm); }
+
+/* Hero Section */
+.hero {
+    padding: 80px 24px;
+    background: var(--gradient-wellness);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-title {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 700;
+    background: linear-gradient(to right, white, white, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.hero-subtitle {
+    font-size: clamp(18px, 3vw, 32px);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--muted-foreground);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.hero-icon {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+.hero-icon-bg {
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-hero);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+    color: white;
+}
+
+/* Features Section */
+.features {
+    padding: 64px 24px;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.feature-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.feature-card:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.feature-icon.mint {
+    background: hsla(155, 65%, 55%, 0.2);
+    color: var(--wellness-mint);
+}
+
+.feature-icon.lavender {
+    background: hsla(260, 25%, 75%, 0.2);
+    color: var(--wellness-lavender);
+}
+
+.feature-icon.sky {
+    background: hsla(200, 50%, 75%, 0.2);
+    color: var(--wellness-sky);
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 8px;
+}
+
+.feature-description {
+    color: var(--muted-foreground);
+}
+
+/* Calendar Styles */
+.calendar-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.calendar-container {
+    background: var(--gradient-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-calendar);
+    overflow: hidden;
+}
+
+.calendar-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.calendar-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.calendar-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-glow);
+}
+
+.btn-danger {
+    background: hsl(0, 65%, 65%);
+    color: white;
+    border-color: hsl(0, 65%, 65%);
+}
+
+.btn-danger:hover {
+    background: hsl(0, 55%, 55%);
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--muted-foreground);
+    font-size: 24px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.nav-btn:hover {
+    color: var(--foreground);
+    background: var(--accent);
+}
+
+.calendar-month {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--foreground);  
+}
+
+.calendar-body {
+    padding: 0 24px 24px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.calendar-weekday {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted-foreground);
+}
+
+.calendar-day {
+    height: 80px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-day:hover {
+    background: hsla(200, 35%, 88%, 0.5);
+}
+
+.calendar-day.has-event {
+    background: hsla(155, 65%, 55%, 0.1);
+}
+
+.day-number {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.day-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.event-title {
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.event-description {
+    font-size: 10px;
+    color: var(--muted-foreground);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.add-event-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--muted-foreground);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.calendar-day:hover .add-event-btn {
+    opacity: 1;
+}
+
+.edit-event-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: none;
+    border: none;
+    color: var(--muted-foreground);
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.calendar-day:hover .edit-event-btn {
+    opacity: 1;
+}
+
+.edit-event-btn:hover {
+    background: var(--accent);
+}
+
+/* Stickers */
+.stickers-panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-top: 24px;
+    box-shadow: var(--shadow-soft);
+}
+
+.stickers-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.stickers-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stickers-subtitle {
+    font-size: 12px;
+    color: var(--muted-foreground);
+    margin-bottom: 12px;
+}
+
+.stickers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sticker {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: var(--muted);
+    border-radius: 8px;
+    cursor: grab;
+    transition: var(--transition-smooth);
+    user-select: none;
+}
+
+.sticker:hover {
+    background: var(--accent);
+}
+
+.sticker:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+    box-shadow: var(--sticker-shadow);
+}
+
+.sticker-on-calendar {
+    position: absolute;
+    font-size: 16px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-calendar);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--muted-foreground);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.close-btn:hover {
+    background: var(--accent);
+    color: var(--foreground);
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--foreground);
+    margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--input);
+    color: var(--foreground);
+    font-size: 14px;
+    transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--ring);
+    box-shadow: 0 0 0 2px hsla(155, 65%, 55%, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 16px;
+    }
+    
+    .hero {
+        padding: 40px 16px;
+    }
+    
+    .features {
+        padding: 40px 16px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+    
+    .calendar-header,
+    .calendar-body {
+        padding: 16px;
+    }
+    
+    .calendar-day {
+        height: 60px;
+    }
+    
+    .modal-content {
+        margin: 16px;
+    }
+    
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .nav-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .nav-content {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+/* Drag and Drop */
+.drag-over {
+    background: hsla(155, 65%, 55%, 0.1) !important;
+    border: 2px dashed var(--primary) !important;
+}
+
+/* Utility Classes */
+.transition-smooth {
+    transition: var(--transition-smooth);
+}
+
+.shadow-soft {
+    box-shadow: var(--shadow-soft);
+}
+
+.shadow-glow {
+    box-shadow: var(--shadow-glow);
+}
+
+.hidden {
+    display: none !important;
+}
