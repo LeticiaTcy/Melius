@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
+
 Como configurar o Git Hub
     Primeiro:
         crie uma pasta do projeto ou 
@@ -33,9 +30,6 @@ Para aceitar as modificações de um branch no main no Git, você pode seguir os
 5. **Finalize o merge**:                    git commit -m "Merge do branch nome-do-branch no main"
 6. **Envie as mudanças para o repositório remoto**:   git push origin main
 
-<<<<<<< HEAD
-=======
-
 =======
 Como configurar o Git Hub
     Primeiro:
@@ -67,7 +61,3 @@ Para aceitar as modificações de um branch no main no Git, você pode seguir os
    Você precisará resolver os conflitos manualmente nos arquivos afetados e depois adicionar as mudanças resolvidas:
 5. **Finalize o merge**:                    git commit -m "Merge do branch nome-do-branch no main"
 6. **Envie as mudanças para o repositório remoto**:   git push origin main
-
-
->>>>>>> 077125945804a39eb25db9e7e35c7106b3fe620b
->>>>>>> f24186366f458676c6652a067842fc4cfa3ebaea
